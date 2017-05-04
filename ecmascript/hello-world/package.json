@@ -1,0 +1,46 @@
+{
+  "name": "xecmascript",
+  "version": "0.0.0",
+  "description": "Exercism exercises in ECMAScript 6.",
+  "author": "Katrina Owen",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exercism/xecmascript"
+  },
+  "devDependencies": {
+    "babel-jest": "^19.0.0",
+    "babel-preset-env": "^1.3.3",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0",
+    "jest": "^19.0.2"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "package.json"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  },
+  "scripts": {
+    "test": "jest --no-cache ./*",
+    "watch": "jest --no-cache --watch ./*",
+    "lint": "eslint *.js; exit 0;",
+    "lint-test": "eslint *.js && jest --no-cache ./* "
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "rules": {
+    "linebreak-style": 0,
+    "max-len": 0
+    }
+  },
+  "licenses": [
+    "MIT"
+  ],
+  "dependencies": {}
+}
