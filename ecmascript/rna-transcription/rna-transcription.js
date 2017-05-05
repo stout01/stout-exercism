@@ -9,7 +9,17 @@ class Transcriptor {
     }
 
     toRna(value) {
-        return Array.prototype.map.call(value, (x) => this.complements[x]).join('');        
+        const output = Array.prototype.map.call(value, (x) => {
+            const complement = this.complements[x];
+
+            if (!complement) {
+                throw new Error('Invalid input DNA.');
+            }
+
+            return complement;
+        }).join('');
+
+        return output;
     }
 }
 
