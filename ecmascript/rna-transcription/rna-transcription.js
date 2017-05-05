@@ -9,7 +9,7 @@ class Transcriptor {
     }
 
     toRna(value) {
-        const output = Array.prototype.map.call(value, (x) => {
+        return [...value].map((x) => {
             const complement = this.complements[x];
 
             if (!complement) {
@@ -18,8 +18,6 @@ class Transcriptor {
 
             return complement;
         }).join('');
-
-        return output;
     }
 }
 
