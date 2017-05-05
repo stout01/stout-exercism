@@ -5,7 +5,7 @@ class Gigasecond {
 
     date() {
         const gigaDate = new Date(this.dob);
-        gigaDate.setSeconds(gigaDate.getSeconds() + 1000000000);
+        gigaDate.setSeconds(gigaDate.getSeconds() + 10 ** 9);
         return gigaDate;
     }
 }
