@@ -9,7 +9,7 @@ class Transcriptor {
     }
 
     toRna(value) {
-        return this.complements[value];
+        return Array.prototype.map.call(value, (x) => this.complements[x]).join('');        
     }
 }
 
