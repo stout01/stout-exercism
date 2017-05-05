@@ -1,10 +1,10 @@
 class Gigasecond {
     constructor(dob) {
-        this.dob = dob;
+        this.gigaDate = new Date(dob.getTime() + 10 ** 12);
     }
 
     date() {
-        return new Date(this.dob.getTime() + 10 ** 12);
+        return this.gigaDate;
     }
 }
 
